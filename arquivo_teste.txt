@@ -1,0 +1,1 @@
+Este arquivo é um teste para testar o Git Commit automatizado pelo VSCODE.
