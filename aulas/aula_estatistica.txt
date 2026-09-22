@@ -1,0 +1,51 @@
+Aula: Introdução à probabilidade estatística
+Prof: Francisco Zipman
+Data: 21/09/2026
+
+Tópicos
+    - Probabilidade
+    - Variáveis aleatórias
+    - Distribuições de probabilidade
+    - População x amostra
+    - Inferencia
+    - Estatisticas e estimadores
+    - Testes de hipótese
+
+Probabilidade:
+    - Eventos (união, intersecção)
+
+
+Variáveis aleatórias:
+    - função que mapeia uma probabilidade aos reais (literalmente pega um resultado, como cara ou coroa, e associa a um número, como 0 ou 1)
+
+Distribuições de Probabilidade:
+    - Normal, lognormal, t-student
+    - Momento de uma distribuição:
+        1: média
+        2: variânica
+        3: skewness
+        4: kurtosis
+    - log-normal = e^(normal) ou ln(log-normal) = normal
+
+
+
+(COMEÇO DA PARTE ESTATÍSTICA) --> matemática sobre a incerteza (até que ponto aceitamos uma incerteza ou não)
+
+População x amostra:
+    - amostra é uma parte de uma população
+
+Inferência:
+    - O que é possível afirmar de uma população partindo de uma amostra
+    - 3 Questões:
+        - Representatividade (amostragem)
+        - Identificação (estimador)
+        - Trade-off Viés-Variância (modelo)
+
+Estatisticas e estimadores:
+    - estatítica (qualquer função sobre a nossa amostra)
+    - estimador (uso de estatísticas para tentar prever algo da população partindo de uma amostra)
+
+Testes de hipótese:
+    - automação de algoritmos
+    - Teste Z: média amostral, média pop. hip., desv.pd pop, tam. da amostra
+    - Teste t: média amostral, média pop. hip., dev.pd amostral, tam. da amostra
