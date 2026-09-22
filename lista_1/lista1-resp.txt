@@ -1,0 +1,5 @@
+LISTA DE EXERCÍCIOS 1 - RESPOSTAS
+
+1) O fechamento ajustado, diferentemente do fechamento nominal, "desconta" efeitos de ventos corporativos (dividendos, JCP, bonificações...),
+fazendo com que ele reflita somente o "ganho/perda" do capital real.
+
