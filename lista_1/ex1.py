@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
+#ações escolhidas: Vale, Itau, Banco do Brasil, Petrobrás e BTG Pactual
 data = pd.read_excel('dados.xlsx')
 data = data.rename(columns={
     data.columns[0]: "Data",
