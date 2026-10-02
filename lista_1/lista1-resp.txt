@@ -8,3 +8,5 @@ literalmente ganhos ou perdas do investimento, o retorno logarítmico mostra o r
 Matematicamente, os retornos logarítmicos são mais simples de computar que o retorno simples para períodos longos, pois pela formula 
 ln(P_t/P_{t-1}) = ln(P_t) - ln(P_{t-1}), o cálculo logarítmico é uma soma, enquanto o simples é uma multiplicação.
 
+5) O ativo com melhor desempenho (segundo o índice sharpe): BPAC11. Ou seja, o Banco BTG teve a melhor premiação sobre o risco dentre os ativos.
+

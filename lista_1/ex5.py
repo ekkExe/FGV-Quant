@@ -29,3 +29,15 @@ ativos = ['BBDC4', 'BPAC11', 'ITUB4', 'PETR4', 'VALE3', 'IBOV']
 r_simp = data[ativos].pct_change()
 r_log = np.log(data[ativos] / data[ativos].shift(1))
 
+means = pd.DataFrame(columns=ativos)
+stds = pd.DataFrame(columns=ativos)
+
+#calcula a média e o desvio padrão dos retornos logarítmicos para cada ativo
+for ativo in ativos:
+    m = r_log[ativo].mean()
+    s = r_log[ativo].std()
+    means[ativo] = [m]
+    stds[ativo] = [s]
+sharpe = means / stds
+
+print(f"Índice de Sharpe: {sharpe}")
