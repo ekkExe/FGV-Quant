@@ -24,10 +24,9 @@ data["Data"] = pd.to_datetime(data["Data"])
 data = data.set_index("Data").sort_index()
 
 #copiado do ex4
-data = data.dropna()
 ativos = ['BBDC4', 'BPAC11', 'ITUB4', 'PETR4', 'VALE3', 'IBOV']
 
-r_log = np.log(data[ativos] / data[ativos].shift(1))
+r_log = np.log(data[ativos] / data[ativos].shift(1)).dropna()
 
 corr = r_log.corr()
 

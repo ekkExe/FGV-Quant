@@ -24,12 +24,11 @@ data["Data"] = pd.to_datetime(data["Data"])
 data = data.set_index("Data").sort_index()
 
 #facilitadores do código
-data = data.dropna()
 ativos = ['BBDC4', 'BPAC11', 'ITUB4', 'PETR4', 'VALE3', 'IBOV']
 
 #cálculo dos retornos simples e logarítmicos
-r_simp = data[ativos].pct_change()
-r_log = np.log(data[ativos] / data[ativos].shift(1))
+r_simp = data[ativos].pct_change().dropna()
+r_log = np.log(data[ativos] / data[ativos].shift(1)).dropna()
 
 #cria o novo DataFrame para armazenar os resultados
 ans = pd.DataFrame(index = ativos)

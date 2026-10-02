@@ -22,6 +22,8 @@ for col in data.columns[1:]:
 data["Data"] = pd.to_datetime(data["Data"])
 data = data.set_index("Data").sort_index()
 
+#**FIM DA SOLUÇÃO DO EX1 + COMEÇO DA SOLUÇÃO DO EX2**
+
 #grafico com a base original
 graf1, axis = plt.subplots(figsize=(12, 6))
 data.plot(ax=axis)
