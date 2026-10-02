@@ -3,3 +3,8 @@ LISTA DE EXERCÍCIOS 1 - RESPOSTAS
 1) O fechamento ajustado, diferentemente do fechamento nominal, "desconta" efeitos de ventos corporativos (dividendos, JCP, bonificações...),
 fazendo com que ele reflita somente o "ganho/perda" do capital real.
 
+4) Os retornos simples e logarítmicos são distintos intuitivamente e matematicamente. Quanto à intuição financeira, enquanto o retorno simples mostra
+literalmente ganhos ou perdas do investimento, o retorno logarítmico mostra o ritmo de crescimento/decrescimento do ativo (justamente pela simetria do ln).
+Matematicamente, os retornos logarítmicos são mais simples de computar que o retorno simples para períodos longos, pois pela formula 
+ln(P_t/P_{t-1}) = ln(P_t) - ln(P_{t-1}), o cálculo logarítmico é uma soma, enquanto o simples é uma multiplicação.
+
