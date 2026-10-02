@@ -30,6 +30,7 @@ data = data.set_index("Data").sort_index()
 ativos = ['BBDC4', 'BPAC11', 'ITUB4', 'PETR4', 'VALE3']
 
 r_simp = data[ativos].pct_change().dropna()
+r_ibov = data["IBOV"].pct_change().loc[r_simp.index].dropna()
 
 mean_anual = r_simp.mean() * 252
 print(mean_anual)
@@ -51,8 +52,16 @@ w_sharpe = ans_sharpe.x
 pesos = pd.DataFrame({"Pesos": w_sharpe}, index=ativos)
 
 print(pesos.sort_values(by="Pesos", ascending=False).to_string(float_format="{:.2%}".format))
+print()
 
 r_diario = r_simp @ w_sharpe
 
-print(f"Média: {r_diario.mean()*252:.4f}")
-print(f"Desvio Padrão: {r_diario.std()*np.sqrt(252):.4f}")
+r_acum = (1 + r_diario).cumprod() - 1
+r_ibov_acum = (1 + r_ibov).cumprod() - 1
+
+
+print("Retorno Acumulado da Carteira:")
+print(r_acum.tail(1).to_string(float_format="{:.2%}".format))
+print()
+print("Retorno Acumulado do IBOVESPA:")
+print(r_ibov_acum.tail(1).to_string(float_format="{:.2%}".format))
