@@ -14,7 +14,7 @@ Matematicamente, os retornos logarítmicos são mais simples de computar que o r
 Como resultado, as ações do Bradesco e do Itaú tiveram a maior correlação (83%) justamente por se tratarem de dois grandes bancos privados, sendo afetados por fatores quase idênticos.
 Todas as ações tiveram correlação média-alta com o IBOVESPA, já que o próprio benchmark é constituído também por essas ações.
 Apesar da Petrobras e da Vale serem de commodities, a correlação é baixa (38%) pelas diferenças estruturais entre o mercado do petróleo e do ferro.
-A mesma lógica se aplica para o BTG. Mesmo com o Itaú e o Bradesco, a correlação se manteve em ~55% por se tratar de um banco de investimentos, sendo estruturalmente diferente de bancos de varejo tradicionais.
+A mesma lógica se aplica para o BTG. Mesmo com o Itaú e o Bradesco, a correlação se manteve em aproximadamente 55% por se tratar de um banco de investimentos, sendo estruturalmente diferente de bancos de varejo tradicionais.
 No quesito da diversificação, a ação da Vale seria a melhor opção por ter a menor correlação média com os demais ativos.
 
-7) Os pesos usados para a alocação foram definidos a partir da maximização do índice sharpe. Isso não teve um motivo financeiro por trás, mas que como foi trabalhado com o sharpe na questão 5, apenas reutilizei o código e adaptei para encontrar a alocação ótima. A alocação ótima foi: 0.0% BBDC4, 75.83% BPAC11, 0.0% ITUB4, 23.81% PETR4, 0.36% VALE3.
+7) Os pesos usados para a alocação foram definidos a partir da maximização do índice sharpe. Isso não teve um motivo financeiro por trás, mas que como foi trabalhado com o sharpe na questão 5, apenas reutilizei o código e adaptei para encontrar a alocação ótima. A alocação ótima foi: 0.0% BBDC4, 75.83% BPAC11, 0.0% ITUB4, 23.81% PETR4, 0.36% VALE3, com média 34,23% e desvio padrão 37,77%.

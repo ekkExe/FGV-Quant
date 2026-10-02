@@ -3,7 +3,7 @@ import numpy as np
 from scipy.optimize import minimize
 
 #define a taxa livre de risco (SELIC)
-selic = float(pd.read_json("https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/1?formato=json")["valor"].iloc[0])/100
+selic = 0.1375
 
 #copiado do ex1
 data = pd.read_excel('dados.xlsx')
@@ -54,5 +54,5 @@ print(pesos.sort_values(by="Pesos", ascending=False).to_string(float_format="{:.
 
 r_diario = r_log @ w_sharpe
 
-print("Média: " + r_diario.mean()*252)
-print("Desvio Padrão: " + r_diario.std()*np.sqrt(252))
+print(f"Média: {r_diario.mean()*252:.4f}")
+print(f"Desvio Padrão: {r_diario.std()*np.sqrt(252):.4f}")
