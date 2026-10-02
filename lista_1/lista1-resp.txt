@@ -8,5 +8,11 @@ literalmente ganhos ou perdas do investimento, o retorno logarítmico mostra o r
 Matematicamente, os retornos logarítmicos são mais simples de computar que o retorno simples para períodos longos, pois pela formula 
 ln(P_t/P_{t-1}) = ln(P_t) - ln(P_{t-1}), o cálculo logarítmico é uma soma, enquanto o simples é uma multiplicação.
 
-5) O ativo com melhor desempenho (segundo o índice sharpe): BPAC11. Ou seja, o Banco BTG teve a melhor premiação sobre o risco dentre os ativos.
+5) O ativo com melhor desempenho (segundo o índice sharpe): BPAC11 (0.046). Ou seja, o Banco BTG teve a melhor premiação sobre o risco dentre os ativos.
 
+6) A Matriz de Correlação mostra em cada célula a correlação entre o ativo da linha com o ativo da coluna.
+Como resultado, as ações do Bradesco e do Itaú tiveram a maior correlação (83%) justamente por se tratarem de dois grandes bancos privados, sendo afetados por fatores quase idênticos.
+Todas as ações tiveram correlação média-alta com o IBOVESPA, já que o próprio benchmark é constituído também por essas ações.
+Apesar da Petrobras e da Vale serem de commodities, a correlação é baixa (38%) pelas diferenças estruturais entre o mercado do petróleo e do ferro.
+A mesma lógica se aplica para o BTG. Mesmo com o Itaú e o Bradesco, a correlação se manteve em ~55% por se tratar de um banco de investimentos, sendo estruturalmente diferente de bancos de varejo tradicionais.
+No quesito da diversificação, a ação da Vale seria a melhor opção por ter a menor correlação média com os demais ativos.
