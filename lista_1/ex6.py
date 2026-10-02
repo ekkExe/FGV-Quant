@@ -1,8 +1,6 @@
 import pandas as pd
 import numpy as np
-
-import pandas as pd
-import numpy as np
+import matplotlib.pyplot as plt
 
 #copiado do ex1
 data = pd.read_excel('dados.xlsx')
@@ -31,11 +29,22 @@ ativos = ['BBDC4', 'BPAC11', 'ITUB4', 'PETR4', 'VALE3', 'IBOV']
 
 r_log = np.log(data[ativos] / data[ativos].shift(1))
 
-matriz = pd.DataFrame(columns=ativos, index=ativos)
+corr = r_log.corr()
 
-for ativo in ativos:
-    corr = r_log.corr()[ativo]
-    corr = corr.to_numpy()
-    matriz.loc[ativo] = corr
-print("Matriz de Correlação:")
-print(matriz)
+graf, axis = plt.subplots(figsize=(7, 6))
+im = axis.imshow(corr.to_numpy(), cmap='RdYlGn', vmin=-1, vmax=1)
+
+axis.set_xticks(np.arange(len(ativos)))
+axis.set_yticks(np.arange(len(ativos)))
+axis.set_xticklabels(ativos)
+axis.set_yticklabels(ativos)
+
+for i in range(len(ativos)):
+    for j in range(len(ativos)):
+        text = axis.text(j, i, f"{corr.iloc[i, j]:.2f}", ha="center", va="center", fontsize=9)
+
+axis.set_title("Matriz Correlação dos Log-Retornos")
+graf.colorbar(im, ax=axis, label="Correlação")
+graf.tight_layout()
+graf.savefig("matriz_correlacao.png", dpi=150)
+plt.show()
