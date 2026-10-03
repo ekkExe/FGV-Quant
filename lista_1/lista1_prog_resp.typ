@@ -1,4 +1,5 @@
 #set text(font:"New Computer Modern Math")
+#set page()
 #text()[= LISTA DE EXERCÍCIOS 1: RESPOSTAS]
 #linebreak()
 
@@ -15,10 +16,11 @@ Matematicamente, os retornos logarítmicos são mais simples de computar que o r
 #text(blue)[5)] O ativo com melhor desempenho (segundo o índice sharpe): BPAC11 (0.053). Ou seja, o Banco BTG teve a melhor premiação sobre o risco dentre os ativos.
 
 #text(blue)[6)] A Matriz de Correlação mostra em cada célula a correlação entre o ativo da linha com o ativo da coluna.
-Como resultado, as ações do Bradesco e do Itaú tiveram a maior correlação (83%) justamente por se tratarem de dois grandes bancos privados, sendo afetados por fatores quase idênticos.
-Todas as ações tiveram correlação média-alta com o IBOVESPA, já que o próprio benchmark é constituído também por essas ações.
-Apesar da Petrobras e da Vale serem de commodities, a correlação é baixa (38%) pelas diferenças estruturais entre o mercado do petróleo e do ferro.
-A mesma lógica se aplica para o BTG. Mesmo com o Itaú e o Bradesco, a correlação se manteve em aproximadamente 55% por se tratar de um banco de investimentos, sendo estruturalmente diferente de bancos de varejo tradicionais.
+
+Como resultado, as ações do Bradesco e do Itaú tiveram a maior correlação (83%) justamente por se tratarem de dois grandes bancos privados, sendo afetados por fatores quase idênticos. Todas as ações tiveram correlação média-alta com o IBOVESPA, já que o próprio benchmark é constituído também por essas ações.
+
+Apesar da Petrobras e da Vale serem de commodities, a correlação é baixa (38%) pelas diferenças estruturais entre o mercado do petróleo e do ferro. A mesma lógica se aplica para o BTG. Mesmo com o Itaú e o Bradesco, a correlação se manteve em aproximadamente 55% por se tratar de um banco de investimentos, sendo estruturalmente diferente de bancos de varejo tradicionais.
+
 No quesito da diversificação, a ação da Vale seria a melhor opção por ter a menor correlação média com os demais ativos.
 
 #text(blue)[7)] Os pesos usados para a alocação foram definidos a partir da maximização do índice sharpe. Isso não teve um motivo financeiro por trás, mas que como foi trabalhado com o sharpe na questão 5, apenas reutilizei o código e adaptei para encontrar a alocação ótima. A alocação ótima foi: 0.0% BBDC4, 61.36%BPAC11, 0.0% ITUB4, 29.20% PETR4, 9.44% VALE3, com média 0.4098 e desvio padrão 0.3426.
@@ -29,3 +31,11 @@ No quesito da diversificação, a ação da Vale seria a melhor opção por ter 
 #emph(text(red)[=== EXERCÍCIOS DE ESTATÍSTICA])
 
 #text(blue)[1)] O Z-score, por definição, mede a quantos desvios padrões um determinado valor está da média. Numa interpretação geométrica, estamos calculando a distância do ponto em relação à média no eixo X. Assim, graficamente, o Z-score é uma curva normalizada, com média 0 e desvio padrão 1, de forma que, seja possível transformar os dados para uma mesma escala ("normalizar"), permitindo comparações entre diferentes distribuições.
+
+#text(blue)[2)] Por definição, como as fórmulas são:
+#linebreak()
+#align(center, text()[ = $z = (macron(x) - mu)/(sigma/sqrt(n))$ $t = (macron(x) - mu)/(s/sqrt(n))$])
+
+Asssim, a curva gaussiana possui apenas o numerador dependente de x, enquanto a t-student tem ambos o numerador e o denominador (já que s é uma função de x). Logo, quanto menor a amostra (n), maior a variação de s entre amostras, aumentando a chance de ocorrerem eventos mais distantes da média em relação à curva normal.
+
+Portanto, é evidente que a curtose da curva t-student seja maior que a curva z-score (caudas mais grossas). 

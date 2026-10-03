@@ -50,8 +50,8 @@ w_sharpe = ans_sharpe.x
 r_portfolio = r_simp @ w_sharpe
 r_portfolio_log = np.log(1 + r_portfolio)
 
-mean = r_portfolio_log.mean() * 252
-std = r_portfolio_log.std() * np.sqrt(252)
+mean = r_portfolio_log.mean()
+std = r_portfolio_log.std()
 z = (r_portfolio_log - mean) / std
 
 print()
