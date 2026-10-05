@@ -1,8 +1,7 @@
 import pandas as pd
 import numpy as np
-from scipy import stats
-import matplotlib.pyplot as plt
 from scipy.optimize import minimize
+from scipy import stats
 
 #define a taxa livre de risco (SELIC)
 selic = 0.1375
@@ -49,7 +48,7 @@ def max_sharpe(w):
 ans_sharpe = minimize(max_sharpe, w0, method="SLSQP", bounds=limites, constraints={"type": "eq", "fun": lambda w: np.sum(w) - 1})
 w_sharpe = ans_sharpe.x
 
-r_portfolio = r_simp[ativos] @ w_sharpe
+r_portfolio = r_simp @ w_sharpe
 r_portfolio_log = np.log(1 + r_portfolio)
 
 mean = r_portfolio_log.mean()
@@ -57,27 +56,18 @@ std = r_portfolio_log.std()
 z = (r_portfolio_log - mean) / std
 
 
-#Gráficos
-x = np.linspace(-6, 6, 1000)
+#Dá para fazer empiricamente, pq não são tantos dados
+prob = (r_portfolio_log > 0.03).mean()
 
-#Z-score
-fig, axis = plt.subplots(figsize=(11, 6))
-axis.hist(z, bins=80, density=True, alpha=0.6, color='blue', label='Z-score dos log-retornos')
+print()
+print(f"Probabilidade = {prob:.2%}")
 
-#Gaussiana/Normal
-axis.plot(x, stats.norm.pdf(x), color='black', linewidth=2, label='Normal N(0,1)')
+#Estatisticamente, daria para estimar por teste de hipótese:
 
-#Curvas T-student
-cores = {5: 'green', 10: 'orange', 50: 'crimson'}
-for df in [5, 10, 50]:
-    scale = np.sqrt((df - 2) / df)
-    y = stats.t.pdf(x / scale, df) / scale
-    axis.plot(x, y, linewidth=1.8, linestyle='--', color=cores[df], label=f"T-student (df = {df}), variância = 1")
+df_fit, loc_fit, scale_fit = stats.t.fit(r_portfolio_log)
+prob_t = stats.t.sf(0.03, df_fit, loc=loc_fit, scale=scale_fit)
 
-axis.set_title("Z-score dos log-retornos do portfólio vs Normal e t-student")
-axis.set_xlabel("Z-score")
-axis.legend()
-axis.set_xlim(-6, 6)
-fig.tight_layout()
-fig.savefig('distribuição_z-score.png', dpi=150)
-plt.show()
+print()
+print(type(prob_t))
+print(f"Probabilidade = {prob_t}")
+print()
