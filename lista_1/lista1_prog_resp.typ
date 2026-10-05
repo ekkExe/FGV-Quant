@@ -1,5 +1,17 @@
-#set text(font:"New Computer Modern Math")
-#set page()
+#set text(
+  font:"New Computer Modern Math"
+)
+#set par(
+  justify: true
+)
+#set rect(
+  width:100%,
+  height:100%,
+  inset:4pt,
+)
+#set par(
+
+)
 #text()[= LISTA DE EXERCÍCIOS 1: RESPOSTAS]
 #linebreak()
 
@@ -39,3 +51,9 @@ No quesito da diversificação, a ação da Vale seria a melhor opção por ter 
 Asssim, a curva gaussiana possui apenas o numerador dependente de x, enquanto a t-student tem ambos o numerador e o denominador (já que s é uma função de x). Logo, quanto menor a amostra (n), maior a variação de s entre amostras, aumentando a chance de ocorrerem eventos mais distantes da média em relação à curva normal.
 
 Portanto, é evidente que a curtose da curva t-student seja maior que a curva z-score (caudas mais grossas). 
+
+#text(blue)[5)] No sentido estatístico, a assimetria e a curtose de uma distribuição medem, respectivamente, o grau de simetria em relação à média e a espessura da cauda dessa distribuição. Elas podem ser entendidas também como os 3o e 4o momentos da curva de distribuição.
+
+Para uma curva normal, os valores padrão são: skewness = 0 (perfeitamente simétrica em relação à média) e kurtosis = 3.
+
+No caso do portfólio, os valores foram -1.11 para o skewness e 28.44 para a kurtosis. O skewness negativo significa que, diferentemetne de uma curva normal, os eventos extremos negativos são mais frequentes/intensos que eventos extremos positivos. A diferença significativa da curtose aponta justamente que, num caso perfeito (de curva normal), os eventos extremos deveriam ser extremamente raros, mas que no portfólio, eles ocorrem com maior frequência que o previsto pela normal.
