@@ -58,3 +58,6 @@ Para uma curva normal, os valores padrão são: skewness = 0 (perfeitamente sim�
 
 No caso do portfólio, os valores foram -1.11 para o skewness e 28.44 para a kurtosis. O skewness negativo significa que, diferentemetne de uma curva normal, os eventos extremos negativos são mais frequentes/intensos que eventos extremos positivos. A diferença significativa da curtose aponta justamente que, num caso perfeito (de curva normal), os eventos extremos deveriam ser extremamente raros, mas que no portfólio, eles ocorrem com maior frequência que o previsto pela normal.
 
+#text(blue)[7)] Máximo Drawdown mede a queda máxima percentual de um ativo ou portfólio em um período entre um pico e um vale.
+
+No portfólio, o MDD foi de -60.16% no dia 23/03/2020. Isso significa que, durante todo o período, a pior queda sofrida no portfólio seria de -60.16%. Esse valor está relacionado com a assimetria e a curtose definidas anteriormente, em que, estatisticamente, as quedas deveriam ser mais acentuadas e mais frequentes.
