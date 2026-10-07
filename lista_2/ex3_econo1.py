@@ -3,7 +3,6 @@ import numpy as np
 import statsmodels.api as sm
 from scipy.optimize import minimize
 
-
 #define a taxa livre de risco (SELIC)
 selic_spot = 0.1375
 data_inicio = "01/01/2017"
@@ -72,8 +71,14 @@ model = sm.OLS(y, intercepto).fit()
 
 print(model.summary())
 
-print()
-print(f"Beta0 (intercepto):     {model.params.iloc[0]:.6f}")
-print(f"Beta1 (sensibilidade):  {model.params.iloc[1]:.6f}")
-print(f"p-valor do Beta1:        {model.pvalues.iloc[1]:.4f}")
-print(f"R² (poder explicativo):  {model.rsquared:.4%}")
+alpha = 0.05
+
+p_value = model.pvalues.iloc[1]
+
+if p_value < alpha:
+    print()
+    print(f'Beta 1 é signicante a 5%')
+
+else:
+    print()
+    print(f'Beta 1 não é significante a 5%')

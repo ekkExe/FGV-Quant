@@ -17,3 +17,6 @@
 
 #text(blue)[2)] A dispersão do gráfico apresentou uma grande concentração do valor da variação da selic (eixo x) em 0. Isso se deve porque a variação da selic acontece apenas em reuniões do COPOM que não acontecem diariamente, mas a cada 45 dias. Além disso, é visualmente justificável a alta sensibilidade encontrada por causa da relação positiva (reta para cima) mesmo com minúsculas alterações na selic (obs: eixo x na escala 10#super[-5])
 
+#text(blue)[3)] Como feito no ex 1, o valor do coeficiente é positivo, correspondendo com a ideia de que o Bradesco possuiria títulos pós-fixados na Selic. Entretanto, ele não é significativo a 5 ($alpha$ < P-value).
+
+Por definição, o R#super[2] é o quadrado da correlação. Assim, ele aponta diretamente a variabilidade percentual que a Selic causa na ação da Bradesco. O valor extremamente pequeno (0.1%) mostra que a BBDC4 possui outros fatores que explicam os outros 99.9% da variação do preço que não foram incluídos no modelo.
