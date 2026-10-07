@@ -61,3 +61,11 @@ No caso do portfólio, os valores foram -1.11 para o skewness e 28.44 para a kur
 #text(blue)[7)] Máximo Drawdown mede a queda máxima percentual de um ativo ou portfólio em um período entre um pico e um vale.
 
 No portfólio, o MDD foi de -60.16% no dia 23/03/2020. Isso significa que, durante todo o período, a pior queda sofrida no portfólio seria de -60.16%. Esse valor está relacionado com a assimetria e a curtose definidas anteriormente, em que, estatisticamente, as quedas deveriam ser mais acentuadas e mais frequentes.
+
+#text(blue)[8)] Para o exercício, o alpha determinado foi de 1%. Isso pois, uma vez que a série dos retornos (tanto do portfólio quanto do IBOV) foi feito de forma diária, ao longo de 8 a 9 anos (2017-2026), a amostra passou de 2000 dados coletados. Assim, o erro padrão (denominador do teste t-student):
+#linebreak()
+#align(center, text()[$#text()[EP] = s/sqrt(n)$])
+
+se aproxima de 0. Portanto, mínimos desvios passam a ter maior impacto no valor do t-student, aproximando cada vez mais os p-values de 0.
+
+Logo a decisão final foi de diminuir o alpha para 1%, diferente do convencional 5%
