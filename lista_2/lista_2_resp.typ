@@ -23,8 +23,10 @@ Por definição, o R#super[2] é o quadrado da correlação. Assim, ele aponta d
 
 #text(blue)[5)] O principal problema de considerar apenas uma variável para modelar a sua previsão são as variáveis omitidas. Isso pode gerar outros problemas relacionados, como o Paradoxo de Simpson.
 
-#text(blue)[6)] Entre os coeficientes, o $beta$#sub[0] quase não se alterou (0.000448 para 0.000493), o $beta$#sub[Selic] se alterou minimamente, de 198 para 193. Já o R#super[2] saiu de 1% para 6.6%.
+Entre os coeficientes, o $beta$#sub[0] quase não se alterou (0.000448 para 0.000493), o $beta$#sub[Selic] se alterou minimamente, de 198 para 193. Já o R#super[2] saiu de 1% para 6.6%.
 
 A alteração no coeficiente da Selic se deu por dois motivos: o código teve que ter o seu período alterado pela impossibilidade de leitura do cambio para um momento maior que 5 anos. Ademais, mesmo que isso não tivesse ocorrido, ainda haveriam alterações no beta pelo fato de que as variáveis escolhidas não serem estritamente não correlacionadas (correl $!=$ 0).
 
 Já o R#super[2] aumentou, já que agora não há apenas 1 fator tentando explicar as alterações na ação, mas 2, a Selic e o câmbio dólar-real.
+
+#text(blue)[6)] A regressão encontrou $beta$#sub[IBOV] = 0.6199. Esse coeficiente, por ser da relação entre um ativo com o mercado, representa o $beta$ de mercado. Esse índica é simplesmente uma medição do risco sistemático e da volatilidade de um ativo com o mercado como um todo. Como $beta$#sub[IBOV] < 1, o portfólio tem volatilidade menor que a do mercado, sendo portanto, uma possível operação defensiva.

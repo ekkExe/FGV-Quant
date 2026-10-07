@@ -5,16 +5,6 @@ from scipy.optimize import minimize
 
 #define a taxa livre de risco (SELIC)
 selic_spot = 0.1375
-data_inicio = "01/01/2017"
-data_fim = "21/09/2026" #data que os dados foram retirados do economática
-codigo = 11
-
-api = f'https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados?formato=json&dataInicial={data_inicio}&dataFinal={data_fim}'
-
-selic = pd.read_json(api)
-selic['data'] = pd.to_datetime(selic["data"], format="%d/%m/%Y")
-selic['valor'] = selic['valor']/100
-selic.set_index('data', inplace=True)
 
 #copiado do ex1
 data = pd.read_excel('dados.xlsx')
@@ -38,7 +28,7 @@ data["Data"] = pd.to_datetime(data["Data"])
 data = data.set_index("Data").sort_index()
 
 #ativo escolhido = Bradesco
-ativos = ['BBDC4']
+ativos = ['BBDC4', "BPAC11", "ITUB4", "PETR4", "VALE3"]
 
 r_simp = data[ativos].pct_change().dropna()
 
@@ -59,3 +49,15 @@ ans_sharpe = minimize(max_sharpe, w0, method="SLSQP", bounds=limites, constraint
 w_sharpe = ans_sharpe.x
 
 r_portfolio = r_simp[ativos] @ w_sharpe
+
+r_ibov = data['IBOV'].pct_change().dropna()
+r_ibov = r_ibov.reindex(index=r_portfolio.index)
+
+x = r_ibov.diff()
+
+y = r_portfolio.loc[x.index]
+
+intercepto = sm.add_constant(x)
+model = sm.OLS(y, intercepto, missing='drop').fit()
+
+print(model.summary())
