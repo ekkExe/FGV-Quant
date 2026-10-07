@@ -9,9 +9,7 @@
   height:100%,
   inset:4pt,
 )
-#set par(
 
-)
 #text()[= LISTA DE EXERCÍCIOS 1: RESPOSTAS]
 #linebreak()
 
