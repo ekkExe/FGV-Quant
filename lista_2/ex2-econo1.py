@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import statsmodels.api as sm
 from scipy.optimize import minimize
+import matplotlib.pyplot as plt
 
 #define a taxa livre de risco (SELIC)
 selic_spot = 0.1375
@@ -69,10 +70,23 @@ y = r_portfolio.loc[x.index]
 intercepto = sm.add_constant(x)
 model = sm.OLS(y, intercepto).fit()
 
-print(model.summary())
+beta0, beta1 = model.params.iloc[0], model.params.iloc[1]
 
-print()
-print(f"Beta0 (intercepto):     {model.params.iloc[0]:.6f}")
-print(f"Beta1 (sensibilidade):  {model.params.iloc[1]:.6f}")
-print(f"p-valor do Beta1:        {model.pvalues.iloc[1]:.4f}")
-print(f"R² (poder explicativo):  {model.rsquared:.4%}")
+#grafico
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.scatter(x, y, alpha=0.4, s=15, color='steelblue', label='Observações Diárias')
+
+x_lin = np.linspace(x.min(), x.max(), 100)
+y_lin = beta0 + beta1*x_lin
+
+ax.plot(x_lin, y_lin, color='crimson', linewidth=2, label='Regressão Linear')
+
+ax.axhline(0, color='gray', linewidth=0.5)
+ax.axvline(0, color='gray', linewidth=0.5)
+ax.set_title("Regressão Linear da BBDC4 em Relação à Selic")
+ax.set_xlabel("Variação da Selic")
+ax.set_ylabel("Retorno Diário da Ação")
+ax.legend()
+fig.tight_layout()
+fig.savefig("regressao_linear_bradesco+selic.png", dpi=150)
+plt.show()
