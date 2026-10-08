@@ -48,3 +48,6 @@ Já o R#super[2] aumentou, já que agora não há apenas 1 fator tentando explic
 
 - FACP: autocorrelação parcial. Semelhantemente à FAC, a FACP analisa a relação linear de Y#sub[t] com Y#sub[t-k], entretanto, ela disconsidera os impactos indiretos dos momentos entre o início e o fim. Na ação, a FACP tem pico em lag = 1 mas logo em seguida desaparece para o preço em nível, enquanto para a primeira diferença ela é próxima de 0 por todo o período.
 
+#text(blue)[5)]
+- O modelo de autorregressão (AR(p)) usa um conjunto de períodos passados p fixo para prever os valores futuros da série.
+- O modelo de média-móvel (MA(q)) também usa um conjunto de períodos passados q para prever os valores futuros da série, mas ele é móvel, assim, conforme os períodos vão passando, os lags usados na previsão vão acompanhando.
