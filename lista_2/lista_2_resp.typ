@@ -42,3 +42,9 @@ Já o R#super[2] aumentou, já que agora não há apenas 1 fator tentando explic
 - Tendência: crescente por aproximadamente metade do período. Após a pandemia a tendência passou a ser descrescente.
 - Sazonalidade: apesar de uma sazonalidade diária aparentemente inconsistente, anualmente há um crescimento forte durante o ano que decai nos meses finais. Assim, há um ciclo anual do preço da ação, mas não diário.
 - Resíduo: persistência considerável, já que os desvios ficam presentes por meses. Além disso, o agrupamento desses desvios mostra um agrupamento das volatilidades da ação (a depender do recorte temporal, a volatilidade se altera drasticamente)
+
+#text(blue)[4)]
+- FAC: autocorrelação. Por definição, é a relação linear entre o Y#sub[t] com o Y#sub[t-n], onde n é qualquer valor entre o momento inicial e o final. Logo, ela inclui tanto a relação direta entre dois momentos, quanto a relação indireta dos momentos entre o início e o fim. No caso da AMBEV, a FAC dos preços em nível foi 0,989 caindo gradualmente, enquanto na primeira diferença foi novamente próxima de 0.
+
+- FACP: autocorrelação parcial. Semelhantemente à FAC, a FACP analisa a relação linear de Y#sub[t] com Y#sub[t-k], entretanto, ela disconsidera os impactos indiretos dos momentos entre o início e o fim. Na ação, a FACP tem pico em lag = 1 mas logo em seguida desaparece para o preço em nível, enquanto para a primeira diferença ela é próxima de 0 por todo o período.
+
