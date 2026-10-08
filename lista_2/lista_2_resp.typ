@@ -34,4 +34,11 @@ Já o R#super[2] aumentou, já que agora não há apenas 1 fator tentando explic
 #linebreak()
 #emph(text(red)[=== EXERCÍCIOS DE ECONO II])
 
-#text(blue)[]
+#text(blue)[1)] A série é estacionária. Isso pois não só foi testado a estacionariedade, mas também porque pelo gráfico da FAC, é evidente que o aumento de lags causa uma queda gradual e lenta da autocorrelação.
+
+#text(blue)[2)] Após o teste Dickey-Fuller, é evidente que a primeira diferença (p-value = 0.01%) é uma série estacionária. Entretanto, a série original possui p-value = 1.1%, isso significa que para a significância convencional (5), os preços são estacionários, mas caso seja considerado apenas 1% como significância, então a série não é estacionária.
+
+#text(blue)[3)]
+- Tendência: crescente por aproximadamente metade do período. Após a pandemia a tendência passou a ser descrescente.
+- Sazonalidade: apesar de uma sazonalidade diária aparentemente inconsistente, anualmente há um crescimento forte durante o ano que decai nos meses finais. Assim, há um ciclo anual do preço da ação, mas não diário.
+- Resíduo: persistência considerável, já que os desvios ficam presentes por meses. Além disso, o agrupamento desses desvios mostra um agrupamento das volatilidades da ação (a depender do recorte temporal, a volatilidade se altera drasticamente)
