@@ -23,6 +23,7 @@
 *Método*: Feature Engineering (Autoenconder)
 
 *Feature Engineering*: São coletadas pequenas variações anormais e que, mesmo imperceptíveis ao humano, indicam para a máquina uma anomalia.
+Outros métodos além do autoencoder: FMA e Sornette.
 
 *Sugestão de Leitura*: Mercados Financeiros Fora de Controle (livro)
 
