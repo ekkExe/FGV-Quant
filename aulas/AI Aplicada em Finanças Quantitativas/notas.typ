@@ -29,6 +29,8 @@ Outros métodos além do autoencoder: FMA e Sornette.
 
 Autor: Benoit Mandelbrot
 
+*Site*: Asimov Academy
+
 *Futuro*: 
 - Focos nos estudos: Matérias de senso-crítico/lógica/intelecto não-linear. 
 - Aprender sobre ferramentas que auxiliam na produtividade (Claude, GPT) em ramos como Code/Codex, Science fundidas com tools e skills.
