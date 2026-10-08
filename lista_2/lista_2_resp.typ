@@ -9,7 +9,7 @@
   height:100%,
   inset:4pt,
 )
-#text()[= LISTA DE EXERCÍCIOS 1: RESPOSTAS]
+#text()[= LISTA DE EXERCÍCIOS 2: RESPOSTAS]
 #linebreak()
 
 #emph(text(red)[=== EXERCÍCIOS DE ECONO I])
@@ -30,3 +30,8 @@ A alteração no coeficiente da Selic se deu por dois motivos: o código teve qu
 Já o R#super[2] aumentou, já que agora não há apenas 1 fator tentando explicar as alterações na ação, mas 2, a Selic e o câmbio dólar-real.
 
 #text(blue)[6)] A regressão encontrou $beta$#sub[IBOV] = 0.6199. Esse coeficiente, por ser da relação entre um ativo com o mercado, representa o $beta$ de mercado. Esse índica é simplesmente uma medição do risco sistemático e da volatilidade de um ativo com o mercado como um todo. Como $beta$#sub[IBOV] < 1, o portfólio tem volatilidade menor que a do mercado, sendo portanto, uma possível operação defensiva.
+
+#linebreak()
+#emph(text(red)[=== EXERCÍCIOS DE ECONO II])
+
+#text(blue)[]
