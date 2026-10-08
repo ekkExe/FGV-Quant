@@ -51,3 +51,8 @@ Já o R#super[2] aumentou, já que agora não há apenas 1 fator tentando explic
 #text(blue)[5)]
 - O modelo de autorregressão (AR(p)) usa um conjunto de períodos passados p fixo para prever os valores futuros da série.
 - O modelo de média-móvel (MA(q)) também usa um conjunto de períodos passados q para prever os valores futuros da série, mas ele é móvel, assim, conforme os períodos vão passando, os lags usados na previsão vão acompanhando.
+
+#text(blue)[6)] Pelo teste AIC, o modelo AR teve AIC = -1109.10, enquanto o AIC do modelo MA foi de 5293.21. Logo, o modelo AR teve menos perda de informação e, portanto, é o mais adequado para o contexto em questão.
+
+A importância dos critérios de informação se dá pela possibilidade de avaliar o quão próximo as previsões feitas estavam da realidade. Especificamente, o AIC mede o quanto de informação foi perdida pelo modelo. Logo, menor AIC significa menor quantidade de informação perdida e portanto uma melhor qualidade do testado.
+
