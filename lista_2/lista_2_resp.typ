@@ -56,3 +56,4 @@ Já o R#super[2] aumentou, já que agora não há apenas 1 fator tentando explic
 
 A importância dos critérios de informação se dá pela possibilidade de avaliar o quão próximo as previsões feitas estavam da realidade. Especificamente, o AIC mede o quanto de informação foi perdida pelo modelo. Logo, menor AIC significa menor quantidade de informação perdida e portanto uma melhor qualidade do testado.
 
+#text(blue)[7)] Pelo teste MSE, o modelo AR foi bem melhor que o modelo MA (0.08 < 2.73), mostrando o mesmo que o AIC. Isso porque, para mais de 2 passos, o modelo MA, ao usar apenas um choque como fator para prever o preço, torna-se aproximadamente constante, errando por mais de R\$1.50 durante quase todo o treino. Já o AR, ao partir do último valor observado, vai lentamente voltando à média (justamente pelo parâmetro de memória ser 0.99).
